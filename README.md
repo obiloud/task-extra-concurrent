@@ -46,7 +46,7 @@ case msg of
     OnEach result -> 
         let 
             ( runningTasks, cmd ) = 
-                Task.Extra.join n model.runningTasks
+                Task.Extra.join result model.runningTasks
         in 
         ( { model | runningTasks = runningTasks }, cmd )
 ```
